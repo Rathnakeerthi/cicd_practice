@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('message'){
             steps{
-                sh "mvn --version"
-                sh "java -version"
+                sh 'mvn --version'
+                sh 'java -version'
             }
         }
 
@@ -29,10 +29,10 @@ pipeline {
             }
         }
      }
-    post {
-        always {
-            echo "Collecting test results..."
-            junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
-        }
-    }
+    // post {
+    //     always {
+    //         echo "Collecting test results..."
+    //         junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+    //     }
+    // }
 }
