@@ -29,10 +29,10 @@ pipeline {
             }
         }
      }
-    // post {
-    //     always {
-    //         echo "Collecting test results..."
-    //         junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
-    //     }
-    // }
+    post {
+        always {
+            echo "Collecting test results..."
+            junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+        }
+    }
 }
