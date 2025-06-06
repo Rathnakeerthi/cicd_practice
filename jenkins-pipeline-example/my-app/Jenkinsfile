@@ -22,7 +22,7 @@ pipeline {
             }
         }
      }
-    post  post {
+    post {
         always {
             echo "Collecting test results..."
             junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
