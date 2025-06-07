@@ -30,7 +30,7 @@ pipeline {
         stage('Build') {
             steps {
                 //dir("/var/lib/jenkins/workspace/New_demo/my-app/") it is for linux
-                dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\jenkins-pipeline-example\\maven_project1\\my-app")  {
+                dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\maven_project1\\jenkins-pipeline-example\\my-app")  {
                 sh 'mvn -B -DskipTests clean package'
                 //C:\ProgramData\Jenkins\.jenkins\workspace\maven_project1\jenkins-pipeline-example\my-app
                 }
