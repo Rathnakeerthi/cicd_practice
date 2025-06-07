@@ -41,7 +41,7 @@ pipeline {
         always {
             echo "Collecting test results..."
             // junit allowEmptyResults: true, testResults: '**target/surefire-reports/*.xml'
-            junit allowEmptyResults: true, testResults: 'C:\\MyProjects\\MyMavenProject\\target\\surefire-reports\\TEST-*.xml'
+            junit allowEmptyResults: true, testResults: 'C:\\Users\\rathn\\MyProjects\\MyMavenProject\\target\\surefire-reports\\TEST-*.xml'
         }
     }
 }
