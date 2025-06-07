@@ -18,8 +18,13 @@ pipeline {
             steps{
                 // echo "PATH = ${M2_HOME}/bin:${PATH}"
                 // echo "M2_HOME = /opt/maven"
-                bat 'echo PATH = %M2_HOME%\\bin;%PATH%'
-                bat 'echo M2_HOME = C:\\Program Files\\Apache\\Maven'
+                // bat 'echo PATH = %M2_HOME%\\bin;%PATH%'
+                // bat 'echo M2_HOME = C:\\Program Files\\Apache\\Maven'
+                bat 'set M2_HOME=C:\\Program Files\\Apache\\Maven'
+                bat 'set PATH=%M2_HOME%\\bin;%PATH%'
+                bat 'echo M2_HOME=%M2_HOME%'
+                bat 'echo PATH=%PATH%'
+                bat 'mvn --version'
             }
         }
         stage('Build') {
